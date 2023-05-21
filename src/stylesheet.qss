@@ -1,0 +1,24 @@
+stylesheet = """
+    QWidget {
+        font-size: 12pt;
+        color: #fff;
+        background-color: #333;
+    }
+
+    QPushButton {
+        border: 2px solid #555;
+        padding: 10px;
+    }
+
+    QPushButton:hover {
+        background-color: #555;
+    }
+
+    QPushButton:pressed {
+        background-color: #222;
+    }
+
+    QSlider {
+        border: none;
+    }
+"""
