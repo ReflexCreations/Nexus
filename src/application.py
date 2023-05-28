@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication
-from .component_manager import setup_injector
+from .component._component_manager import setup_injector
 from .main_window import MainWindow
 
 class Application(QApplication):

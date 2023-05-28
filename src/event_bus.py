@@ -1,22 +1,17 @@
-from PyQt5.QtCore import QObject
-from injector import inject
-from .pad_interface import PadInterfaceController
-from .log_viewer import LogViewerController
-from .utils import logger
+import asyncio
+from typing import Any, Callable, Dict
 
-class Mediator(QObject):
-    @inject
-    def __init__(self, pad_interface_controller: PadInterfaceController, log_viewer_controller: LogViewerController):
-        super().__init__()
-        self.PI = pad_interface_controller
-        self.LV = log_viewer_controller
-        self.setup_pad_interface_listeners()
-        self.setup_logger_listeners()
+class EventBus: 
+    def __init__(self):
+        self._event_handlers: Dict[str, list] = {}
 
-    def setup_pad_interface_listeners(self):
-        self.PI.refresh.connect(lambda: self.PI.enumerate())
-        self.PI.connect.connect(lambda: self.PI.open())
-        self.PI.disconnect.connect(lambda: self.PI.disconnect_clicked())
+    def subscribe(self, event_type: str, handler: Callable):
+        if event_type not in self._event_handlers:
+            self._event_handlers[event_type] = []
+        self._event_handlers[event_type].append(handler)
 
-    def setup_logger_listeners(self):
-        logger.new_message.connect(lambda message: self.LV.update(message))
+    async def publish(self, event_type: str, data: Any):
+        if event_type in self._event_handlers:
+            handlers = self._event_handlers[event_type]
+            for handler in handlers:
+                asyncio.create_task(handler(data))

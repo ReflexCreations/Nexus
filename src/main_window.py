@@ -27,4 +27,4 @@ class MainWindow(QMainWindow):
         with open('stylesheet.qss', 'r') as f:
             return f.read()
         
-    def load_profile(profile):
+    #def load_profile(profile):
