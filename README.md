@@ -5,3 +5,10 @@ Hello, this is a mostly empty project at the moment. I recently started working 
 At the same time, I may as well put that to good use. So this project is effectively a self-guided learning experience for me to improve my development skills, while also adding functionality I've always wanted to RE:Flex and de-janking the previous python-interface of v2.
 
 That being said, if you happen to be a software developer, and feel like going through my work, please do, and critique is more than welcomed.
+
+Install python
+python -m pip install --upgrade pip
+python -m venv env
+(Windows) .\env\Scripts\activate
+(Powershell) .\env\Scripts\Activate.ps1
+(Linux) source env\bin\activate

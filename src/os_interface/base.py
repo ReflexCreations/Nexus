@@ -1,10 +1,10 @@
-from abc import ABC, abstractmethod
+import abc
 
-class Base(ABC):
-    @abstractmethod
+class Base(abc.ABC):
+    @abc.abstractmethod
     def lock_access(self, pad):
         pass
 
-    @abstractmethod
+    @abc.abstractmethod
     def unlock_access(self, pad):
         pass

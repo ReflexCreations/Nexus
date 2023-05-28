@@ -1,7 +1,9 @@
-from src.application import Application
+import src.application as application
+
 
 def main():
-    Application()
+    application.Application()
+
 
 if __name__ == "__main__":
     main()

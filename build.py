@@ -1,8 +1,7 @@
-import os
 import sys
 import subprocess
 
-REQUIRED_PYTHON = (3, 7)
+REQUIRED_PYTHON = (3, 8)
 REQUIRED_PYINSTALLER = (4, 0)
 
 # Needs quite a few updates, but supplying platform as an optional argument is good (default to detected OS)
