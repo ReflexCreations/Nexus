@@ -1,9 +1,7 @@
-import src.application as application
+import sys
 
-
-def main():
-    application.Application()
+from src.app.application import Application
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(Application().run())

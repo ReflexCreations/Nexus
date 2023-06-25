@@ -1,0 +1,53 @@
+from multiprocessing import Process
+import hid
+
+class ReflexV2(USBHID):
+    PAD_USB_VID = 0x0483
+    PAD_USB_PID = 0x5750
+    PAD_PRODUCT_STRING = "RE:Flex Dance Pad"
+    USB_HID_PACKET_SIZE = 64
+    USB_TRANSFER_RATE = 1000
+
+
+class ReflexPadDriver(Process):
+    def __init__(self):
+        pass
+
+    def run(self):
+        while not self.exit.is_set():
+            pass
+
+
+class Model():
+    def __init__(self):
+        self.pad = None
+
+    def open(self, serial=None):
+        self.pad = hid.device()
+        self.pad.open(PAD_USB_VID, PAD_USB_PID, serial_number=serial)
+        if self.pad.get_product_string() == PAD_PRODUCT_STRING:
+            process = Process(target=self.io_loop, args=(serial,))
+            process.start()
+        self.lock_access()
+
+    def close(self):
+        self.unlock_access()
+        self.pad.close()
+
+    def lock_access(self):
+        os_interface.lock_access(self.pad)
+
+    def unlock_access(self):
+        os_interface.unlock_access(self.pad)
+
+    @staticmethod
+    def enumerate():
+        pad_list = [p for p in hid.enumerate(PAD_USB_VID, PAD_USB_PID)]
+        return pad_list
+
+    @staticmethod
+    def io_loop(serial):
+        pad = hid.device()
+        pad.open(PAD_USB_VID, PAD_USB_PID, serial_number=serial)
+        rx_packet = pad.read(USB_HID_PACKET_SIZE)
+        print(rx_packet)
