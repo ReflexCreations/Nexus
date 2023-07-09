@@ -13,7 +13,7 @@ homepage = "https://reflex.dance"
 repository = "https://github.com/ReflexCreations/Nexus"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.12"
+python = ">=3.9,<3.12"
 libusb_package = "*"
 PySide6 = "*"
 pyusb = "*"
@@ -22,14 +22,20 @@ QtAwesome = "*"
 
 [tool.poetry.dev-dependencies]
 sphinx = "*"
+sphinx_rtd_theme = "*"
 ruff = "*"
 pyinstaller = "*"
 toml = "*"
 
 [tool.poetry.extras]
+build = ["pyinstaller"]
 docs = ["sphinx", "toml"]
 lint = ["ruff"]
-build = ["pyinstaller"]
+
+[metadata]
+title = "RE:Flex Nexus"
+copyright = "2023, Impulse Creations, Ltd"
+logo = "assets/favicon.ico"
 
 [tool.poetry.scripts]
 app = "nexus:app"

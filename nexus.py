@@ -14,7 +14,7 @@ def build():
 
 
 def docs():
-    script = ["sphinx-build", "-b", "html", "docs/source", "docs/build"]
+    script = ["sphinx-build", "-E", "-a", "-b", "html", "docs/", "docs/build"]
     subprocess.run(script)
 
 
