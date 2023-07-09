@@ -10,7 +10,4 @@ sphinx:
 
 python:
   install:
-    - method: pip
-      path: .
-      extra_requirements:
-      - toml
+  - requirements: docs/source/requirements.txt
