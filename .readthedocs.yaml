@@ -11,4 +11,6 @@ sphinx:
 python:
   install:
     - method: pip
-      path: toml
+      path: .
+      extra_requirements:
+      - toml
