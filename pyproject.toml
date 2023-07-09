@@ -1,0 +1,38 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "nexus"
+version = "0.0.1"
+description = "RE:Flex Nexus - Universal Dance Pad Utilities"
+authors = ["Brittany Barrett <brittany.l.barrett@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://reflex.dance"
+repository = "https://github.com/ReflexCreations/Nexus"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+libusb_package = "*"
+PySide6 = "*"
+pyusb = "*"
+pyqtdarktheme = "*"
+QtAwesome = "*"
+
+[tool.poetry.dev-dependencies]
+sphinx = "*"
+ruff = "*"
+pyinstaller = "*"
+toml = "*"
+
+[tool.poetry.extras]
+docs = ["sphinx", "toml"]
+lint = ["ruff"]
+build = ["pyinstaller"]
+
+[tool.poetry.scripts]
+app = "nexus:app"
+build = "nexus:build"
+docs = "nexus:docs"
+lint = "nexus:lint"
