@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Upload release to PyPI
-      url: https://pypi.org/p/reflex_nexus
+      url: https://pypi.org/p/reflex-nexus
     permissions:
       id-token: write
     steps:
@@ -20,7 +20,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y libegl1-mesa
-        python -m pip install --upgrade pip
         pip install poetry
         poetry install
     - name: Build package

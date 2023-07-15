@@ -8,10 +8,11 @@ copyright = "2023, Impulse Creations, Ltd"
 logo = "assets/favicon.ico"
 
 [tool.poetry]
-name = "reflex_nexus"
-version = "0.0.1"
+name = "reflex-nexus"
+version = "0.0.12"
 description = "RE:Flex Nexus - Universal Dance Pad Utilities"
 authors = ["Brittany Barrett <brittany.l.barrett@gmail.com>"]
+packages = [{include = "src"}]
 license = "MIT"
 readme = "README.md"
 homepage = "https://reflex.dance"
@@ -19,7 +20,7 @@ repository = "https://github.com/ReflexCreations/Nexus"
 documentation = "https://reflex-nexus.readthedocs.io"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.12"
+python = ">=3.10, <3.11"
 libusb_package = "*"
 PySide6 = "*"
 pyusb = "*"
@@ -42,11 +43,11 @@ pytest = "*"
 pytest-cov = "*"
 
 [tool.poetry.scripts]
-app = "reflex_nexus:app"
-build = "reflex_nexus:build"
-docs = "reflex_nexus:docs"
-lint = "reflex_nexus:lint"
-test = "reflex_nexus:test"
+app = "nexus:app"
+build = "nexus:build"
+docs = "nexus:docs"
+lint = "nexus:lint"
+test = "nexus:test"
 
 [tool.ruff]
 line-length = 79

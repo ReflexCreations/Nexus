@@ -1,5 +1,4 @@
 """Main entry scripts for RE:Flex Nexus project."""
-
 import subprocess
 import sys
 
@@ -13,7 +12,7 @@ def app() -> None:
 
 def build() -> int:
     """Build application executable."""
-    script = ["pyinstaller", "reflex_nexus.spec"]
+    script = ["pyinstaller", "nexus.spec"]
     return subprocess.run(script).returncode
 
 

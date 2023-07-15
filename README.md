@@ -5,6 +5,9 @@
 [![][license-badge]][LICENSE] [![][tag-badge]][tag]
 [![][discord-badge]][discord]
 
+__Note: This is a work in progress project. References made in the readme__
+__and documentation are currently unfulfilled.__
+
 # RE:Flex Nexus - Universal Dance Pad Utilities
 
 RE:Flex Nexus aims to provide a comprehensive collection of PC software
@@ -22,9 +25,9 @@ technology together.
 
 - The latest executable can be found on the [Releases] page
 - Download the application for your respective operating system
-- Download the `nexus_resources.zip` package and extract to the location
+- Download the `nexus-resources.zip` package and extract to the location
 you would like to store program data
-- Open the `reflex_nexus` application
+- Open the `reflex-nexus` application
 - You will be prompted to set up your program data folder, enter the directory
 of the folder that you just extracted
 
@@ -100,7 +103,7 @@ file.*
 [LICENSE]: https://github.com/ReflexCreations/Nexus/LICENSE
 [lint]: https://github.com/ReflexCreations/Nexus/actions/workflows/lint.yml
 [Python]: https://python.org/downloads/
-[pypi]: https://pypi.org/project/reflex_nexus
+[pypi]: https://pypi.org/project/reflex-nexus
 [Releases]: https://github.com/ReflexCreations/Nexus/releases/
 [tag]: https://github.com/ReflexCreations/Nexus/tags
 [test]: https://github.com/ReflexCreations/Nexus/actions/workflows/test.yml
@@ -132,7 +135,7 @@ file.*
 [lint-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/lint.yml?label=linting
 [linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-linux.yml?label=linux%20build
 [macos-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-macos.yml?label=macos%20build
-[pypi-badge]: https://img.shields.io/pypi/v/reflex_nexus
+[pypi-badge]: https://img.shields.io/pypi/v/reflex-nexus
 [tag-badge]: https://img.shields.io/github/v/tag/ReflexCreations/Nexus
 [test-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/test.yml?label=tests
 [windows-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-windows.yml?label=windows%20build

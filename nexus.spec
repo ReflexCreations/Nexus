@@ -3,7 +3,7 @@
 block_cipher = None
 
 a = Analysis(
-    ['reflex_nexus.py'],
+    ['nexus.py'],
     pathex=[],
     binaries=[],
     datas=[('assets/*', 'assets/')],
@@ -26,7 +26,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='reflex_nexus',
+    name='reflex-nexus',
     clean=True,
     debug=False,
     bootloader_ignore_signals=False,

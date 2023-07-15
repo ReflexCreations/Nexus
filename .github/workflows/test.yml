@@ -13,7 +13,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y libegl1-mesa
-        python -m pip install --upgrade pip
         pip install poetry
         poetry install
         poetry run test
