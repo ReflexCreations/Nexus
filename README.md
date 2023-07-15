@@ -1,7 +1,9 @@
-[![][docs-badge]][Documentation] [![][license-badge]][LICENSE]
-[![][coverage-badge]][coverage] [![][tag-badge]][tag]
 [![][linux-badge]][Releases] [![][macos-badge]][Releases]
-[![][windows-badge]][Releases] [![][discord-badge]][discord]
+[![][windows-badge]][Releases] [![][pypi-badge]][pypi]
+[![][docs-badge]][Documentation] [![][lint-badge]][lint]
+[![][test-badge]][test] [![][coverage-badge]][coverage]
+[![][license-badge]][LICENSE] [![][tag-badge]][tag]
+[![][discord-badge]][discord]
 
 # RE:Flex Nexus - Universal Dance Pad Utilities
 
@@ -9,6 +11,12 @@ RE:Flex Nexus aims to provide a comprehensive collection of PC software
 utilities for dance pads. The interface specification is flexible, allowing
 any dance pad to be quickly integrated and begin using available software
 features.
+
+In addition, the project aims to provide a comprehensive set of user guides
+for open-source dance pad design. The goal is to create a centralised
+ecosystem for both software tools and documentation of dance pads. This
+will hopefully inspire creativity/freedom, while letting dance gamers share
+technology together.
 
 ## Installation
 
@@ -20,7 +28,7 @@ you would like to store program data
 - You will be prompted to set up your program data folder, enter the directory
 of the folder that you just extracted
 
-## Documentation
+## Usage
 
 For details on usage, check out the [Documentation].
 
@@ -67,13 +75,15 @@ appreciated:
 - [libusb-package] - Container package for libusb
 - [PyQtDarkTheme] - Dark/light theme for Python QT applications
 - [PySide6] - Python bindings for QT GUI framework
-- [PyUSB] - Facilitates communication with USB peripherals
+- [PyUSB] - Python USB access module
 - [QtAwesome] - FontAwesome/Elusive Icons for Python QT applications
 
 #### Development dependencies:
 
-- [Poetry] - Dependency manager
+- [Poetry] - Dependency, environment and packaging manager
 - [PyInstaller] - Cross-platform executable generator
+- [pytest] - Project testing
+- [pytest-cov] - Coverage integration for pytest
 - [Ruff] - Project linting
 - [Sphinx] - Documentation generator
 - [Sphinx-Rtd-Theme] - Read the Docs Sphinx theme
@@ -83,13 +93,19 @@ file.*
 
 <!--- Site links -->
 
+[coverage]: https://coveralls.io/github/ReflexCreations/Nexus
+[discord]: https://discord.gg/TCn3emnwZU
 [Documentation]: https://reflex-nexus.readthedocs.io/
 [Git]: https://git-scm.com/downloads/
 [LICENSE]: https://github.com/ReflexCreations/Nexus/LICENSE
+[lint]: https://github.com/ReflexCreations/Nexus/actions/workflows/lint.yml
 [Python]: https://python.org/downloads/
+[pypi]: https://pypi.org/project/reflex_nexus
 [Releases]: https://github.com/ReflexCreations/Nexus/releases/
+[tag]: https://github.com/ReflexCreations/Nexus/tags
+[test]: https://github.com/ReflexCreations/Nexus/actions/workflows/test.yml
 
-<!--- Project dependency links -->
+<!--- Runtime dependency links -->
 
 [libusb-package]: https://pypi.org/project/libusb-package/
 [PyQtDarkTheme]: https://pypi.org/project/pyqtdarktheme/
@@ -101,20 +117,22 @@ file.*
 
 [Poetry]: https://pypi.org/project/poetry/
 [PyInstaller]: https://pypi.org/project/pyinstaller/
+[pytest]: https://pypi.org/project/pytest/
+[pytest-cov]: https://pypi.org/project/pytest-cov/
 [Ruff]: https://pypi.org/project/ruff/
 [Sphinx]: https://pypi.org/project/Sphinx/
 [Sphinx-Rtd-Theme]: https://pypi.org/project/sphinx-rtd-theme/
 
-<!--- Badge links -->
+<!--- Badge images -->
 
-[coverage]: https://coveralls.io/github/ReflexCreations/Nexus
 [coverage-badge]: https://img.shields.io/coverallsCoverage/github/ReflexCreations/Nexus
-[discord]: https://discord.gg/TCn3emnwZU
 [discord-badge]: https://img.shields.io/discord/738700768147669088?label=discord
 [docs-badge]: https://img.shields.io/readthedocs/reflex-nexus
 [license-badge]: https://img.shields.io/github/license/ReflexCreations/Nexus
-[linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/linux-pipeline?label=linux
-[macos-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/macos-pipeline?label=macos
-[tag]: https://github.com/ReflexCreations/Nexus/tags
+[lint-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/lint.yml?label=linting
+[linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-linux.yml?label=linux%20build
+[macos-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-macos.yml?label=macos%20build
+[pypi-badge]: https://img.shields.io/pypi/v/reflex_nexus
 [tag-badge]: https://img.shields.io/github/v/tag/ReflexCreations/Nexus
-[windows-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/windows-pipeline?label=windows
+[test-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/test.yml?label=tests
+[windows-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-windows.yml?label=windows%20build
