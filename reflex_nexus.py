@@ -31,12 +31,6 @@ def lint() -> int:
 
 def test() -> int:
     """Run unit tests on project."""
-    script = ["pytest"]
-    return subprocess.run(script).returncode
-
-
-def test_cov() -> int:
-    """Run unit tests with coveralls check for CI/CD."""
     script = ["pytest", "--cov=."]
     return subprocess.run(script).returncode
 

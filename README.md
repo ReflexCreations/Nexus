@@ -1,5 +1,5 @@
-![docs-badge] ![license-badge] ![coverage-badge] ![tag-badge] ![linux-badge]
-![macos-badge] ![windows-badge] ![discord-badge]
+![][docs-badge] ![][license-badge] ![][coverage-badge] ![][tag-badge]
+![][linux-badge] ![][macos-badge] ![][windows-badge] ![][discord-badge]
 
 
 # RE:Flex Nexus - Universal Dance Pad Utilities

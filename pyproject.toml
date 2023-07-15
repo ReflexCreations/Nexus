@@ -39,9 +39,6 @@ pyinstaller = "*"
 
 [tool.poetry.group.test.dependencies]
 pytest = "*"
-
-[tool.poetry.group.test_cov.dependencies]
-pytest = "*"
 pytest-cov = "*"
 
 [tool.poetry.scripts]
@@ -50,7 +47,6 @@ build = "reflex_nexus:build"
 docs = "reflex_nexus:docs"
 lint = "reflex_nexus:lint"
 test = "reflex_nexus:test"
-test_cov = "reflex_nexus:test_cov"
 
 [tool.ruff]
 line-length = 79
