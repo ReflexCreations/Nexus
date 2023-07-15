@@ -1,10 +1,11 @@
 # Folders
 
 __pycache__/
+.pytest_cache/
 .ruff_cache/
 .vscode/
 build/
 dist/
 env/
 temp/
-poetry.lock
+.coverage

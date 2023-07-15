@@ -1,13 +1,15 @@
+"""Configuration file for Sphinx documentation."""
+
 import os
 import pathlib
 
 import toml
 
-root_dir = pathlib.Path(__file__).parent.parent.resolve()
 
-
-def from_root(fn):
-    return os.path.join(root_dir, fn)
+def from_root(filename: str) -> str:
+    """Get the filename string relative to the root directory."""
+    root_dir = pathlib.Path(__file__).parent.parent.resolve()
+    return os.path.join(root_dir, filename)
 
 
 config = toml.load(from_root("pyproject.toml"))

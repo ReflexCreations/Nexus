@@ -2,8 +2,13 @@
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[metadata]
+title = "RE:Flex Nexus"
+copyright = "2023, Impulse Creations, Ltd"
+logo = "assets/favicon.ico"
+
 [tool.poetry]
-name = "nexus"
+name = "reflex_nexus"
 version = "0.0.1"
 description = "RE:Flex Nexus - Universal Dance Pad Utilities"
 authors = ["Brittany Barrett <brittany.l.barrett@gmail.com>"]
@@ -11,6 +16,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://reflex.dance"
 repository = "https://github.com/ReflexCreations/Nexus"
+documentation = "https://reflex-nexus.readthedocs.io"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
@@ -20,25 +26,47 @@ pyusb = "*"
 pyqtdarktheme = "*"
 QtAwesome = "*"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.docs.dependencies]
 sphinx = "*"
 sphinx_rtd_theme = "*"
-ruff = "*"
-pyinstaller = "*"
 toml = "*"
 
-[tool.poetry.extras]
-build = ["pyinstaller"]
-docs = ["sphinx", "toml"]
-lint = ["ruff"]
+[tool.poetry.group.lint.dependencies]
+ruff = "*"
 
-[metadata]
-title = "RE:Flex Nexus"
-copyright = "2023, Impulse Creations, Ltd"
-logo = "assets/favicon.ico"
+[tool.poetry.group.build.dependencies]
+pyinstaller = "*"
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+
+[tool.poetry.group.test_cov.dependencies]
+pytest = "*"
+pytest-cov = "*"
 
 [tool.poetry.scripts]
-app = "nexus:app"
-build = "nexus:build"
-docs = "nexus:docs"
-lint = "nexus:lint"
+app = "reflex_nexus:app"
+build = "reflex_nexus:build"
+docs = "reflex_nexus:docs"
+lint = "reflex_nexus:lint"
+test = "reflex_nexus:test"
+test_cov = "reflex_nexus:test_cov"
+
+[tool.ruff]
+line-length = 79
+ignore = ["ANN101", "D203", "D212"]
+select = [
+    "ANN",  # flake8-annotations
+    "B",    # flake8-bugbear
+    "C90",  # mccabe
+    "D",    # pydocstyle
+    "E",    # pycodestyle-errors
+    "F",    # pyflakes
+    "G",    # flake8-logging-format
+    "I001", # isort
+    "N",    # pep8-naming
+    "PT",   # flake8-pytest-style
+    "RUF",  # ruff-specific-rules
+    "UP",   # pyupgrade
+    "W"     # pycodestyle-warnings
+]
