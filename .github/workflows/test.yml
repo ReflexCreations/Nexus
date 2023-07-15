@@ -5,18 +5,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - name: Setup python
+      uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-    - name: Run test suite and upload to coveralls
-    - run: |
+    - name: Run test suite
+      run: |
         sudo apt-get update
         sudo apt-get install -y libegl1-mesa
         python -m pip install --upgrade pip
         pip install poetry
         poetry install
         poetry run test
-    - uses: coverallsapp/github-action@v2
+    - name: Upload to coveralls
+      uses: coverallsapp/github-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         coveralls-token: ${{ secrets.COVERALLS_TOKEN }}
