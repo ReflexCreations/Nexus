@@ -9,7 +9,8 @@ jobs:
       with:
         python-version: '3.10'
     - run: |
-        apt-get install -y libegl1-mesa
+        sudo apt-get update
+        sudo apt-get install -y libegl1-mesa
         pip install poetry
         poetry install
         poetry run build
