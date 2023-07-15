@@ -1,6 +1,7 @@
-![][docs-badge] ![][license-badge] ![][coverage-badge] ![][tag-badge]
-![][linux-badge] ![][macos-badge] ![][windows-badge] ![][discord-badge]
-
+[![][docs-badge]][Documentation] [![][license-badge]][LICENSE]
+[![][coverage-badge]][coverage] [![][tag-badge]][tag]
+[![][linux-badge]][Releases] [![][macos-badge]][Releases]
+[![][windows-badge]][Releases] [![][discord-badge]][discord]
 
 # RE:Flex Nexus - Universal Dance Pad Utilities
 
@@ -106,11 +107,14 @@ file.*
 
 <!--- Badge links -->
 
+[coverage]: https://coveralls.io/github/ReflexCreations/Nexus
 [coverage-badge]: https://img.shields.io/coverallsCoverage/github/ReflexCreations/Nexus
-[discord-badge]: https://img.shields.io/discord/738700768147669088
+[discord]: https://discord.gg/TCn3emnwZU
+[discord-badge]: https://img.shields.io/discord/738700768147669088?label=discord
 [docs-badge]: https://img.shields.io/readthedocs/reflex-nexus
 [license-badge]: https://img.shields.io/github/license/ReflexCreations/Nexus
 [linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/linux-pipeline?label=linux
 [macos-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/macos-pipeline?label=macos
+[tag]: https://github.com/ReflexCreations/Nexus/tags
 [tag-badge]: https://img.shields.io/github/v/tag/ReflexCreations/Nexus
 [windows-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/windows-pipeline?label=windows
