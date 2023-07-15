@@ -100,7 +100,7 @@ file.*
 [discord]: https://discord.gg/TCn3emnwZU
 [Documentation]: https://reflex-nexus.readthedocs.io/
 [Git]: https://git-scm.com/downloads/
-[LICENSE]: https://github.com/ReflexCreations/Nexus/LICENSE
+[LICENSE]: https://github.com/ReflexCreations/Nexus/blob/master/LICENSE
 [lint]: https://github.com/ReflexCreations/Nexus/actions/workflows/lint.yml
 [Python]: https://python.org/downloads/
 [pypi]: https://pypi.org/project/reflex-nexus
