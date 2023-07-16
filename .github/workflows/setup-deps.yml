@@ -16,7 +16,6 @@ jobs:
     outputs:
       cache-hit: ${{ steps.cache.outputs.cache-hit }}
     steps:
-    - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10'
