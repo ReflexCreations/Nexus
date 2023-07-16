@@ -17,7 +17,7 @@ jobs:
       with:
         python-version: '3.10'
     - id: install-command
-      run:
+      run: |
         if [[ "${{ inputs.os }}" == "ubuntu-latest" ]]; then
           echo "sudo apt-get install -y libegl1-mesa"
         elif [[ "${{ inputs.os }}" == "macos-latest" ]]; then
@@ -28,12 +28,12 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.cache/pypoetry
-        key:  ${{ runner.os }}-poetry-${{ hashFiles('**/pyproject.toml') }}
-        restore-keys: ${{ runner.os }}-poetry-
+        key:  ${{ inputs.os }}-poetry-${{ hashFiles('**/pyproject.toml') }}
+        restore-keys: ${{ inputs.os }}-poetry-
     - run:
         pip install poetry
         poetry install
-    - run:
+    - run: |
         if [[ "${{ steps.cache.outputs.cache-hit }}" == "true" ]]; then
           echo "Cache hit"
         else
