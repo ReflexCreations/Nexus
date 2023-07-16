@@ -1,4 +1,4 @@
-name: test
+name: project-test
 on: pull_request
 jobs:
   test:
