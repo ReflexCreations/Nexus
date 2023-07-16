@@ -1,0 +1,45 @@
+name: Setup dependencies
+
+on:
+  workflow_call:
+    inputs:
+      os:
+        required: true
+        type: string
+    secrets:
+      cache-token:
+        required: true
+
+jobs:
+  setup:
+    runs-on: ${{ inputs.os }}
+    outputs:
+      cache-hit: ${{ steps.cache.outputs.cache-hit }}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - id: install-command
+      run:
+        if [[ "${{ inputs.os }}" == "ubuntu-latest" ]]; then
+          echo "sudo apt-get install -y libegl1-mesa"
+        elif [[ "${{ inputs.os }}" == "macos-latest" ]]; then
+          echo "brew install mesa"
+        fi
+    - run: ${{ steps.install-command.outputs.command }}}
+    - id: cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pypoetry
+        key:  ${{ runner.os }}-poetry-${{ hashFiles('**/pyproject.toml') }}
+        restore-keys: ${{ runner.os }}-poetry-
+    - run:
+        pip install poetry
+        poetry install
+    - run:
+        if [[ "${{ steps.cache.outputs.cache-hit }}" == "true" ]]; then
+          echo "Cache hit"
+        else
+          echo "Cache miss"
+        fi

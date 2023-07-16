@@ -1,0 +1,26 @@
+name: Test cached dependencies
+
+on: push
+
+jobs:
+  test-linux-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/setup-deps.yml
+        with:
+          os: ubuntu-latest
+      - run: poetry run test
+  test-linux-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/setup-deps.yml
+        with:
+          os: ubuntu-latest
+      - run: poetry run lint
+  test-macos-build:
+    runs-on: macos-latest
+    steps:
+      - uses: ./.github/workflows/setup-deps.yml
+        with:
+          os: macos-latest
+      - run: poetry run build
