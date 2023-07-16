@@ -9,3 +9,5 @@ dist/
 env/
 temp/
 .coverage
+lint.txt
+test.xml

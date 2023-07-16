@@ -21,3 +21,8 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         coveralls-token: ${{ secrets.COVERALLS_TOKEN }}
+    - name: Upload report
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-report
+        path: test.xml

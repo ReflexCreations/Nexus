@@ -96,17 +96,17 @@ file.*
 
 <!--- Site links -->
 
-[coverage]: https://coveralls.io/github/ReflexCreations/Nexus
+[coverage]: https://coveralls.io/github/ReflexCreations/Nexus?branch=main
 [discord]: https://discord.gg/TCn3emnwZU
 [Documentation]: https://reflex-nexus.readthedocs.io/
 [Git]: https://git-scm.com/downloads/
 [LICENSE]: https://github.com/ReflexCreations/Nexus/blob/master/LICENSE
-[lint]: https://github.com/ReflexCreations/Nexus/actions/workflows/lint.yml
+[lint]: https://github.com/ReflexCreations/Nexus/actions
 [Python]: https://python.org/downloads/
 [pypi]: https://pypi.org/project/reflex-nexus
 [Releases]: https://github.com/ReflexCreations/Nexus/releases/
 [tag]: https://github.com/ReflexCreations/Nexus/tags
-[test]: https://github.com/ReflexCreations/Nexus/actions/workflows/test.yml
+[test]: https://github.com/ReflexCreations/Nexus/actions
 
 <!--- Runtime dependency links -->
 
@@ -129,7 +129,7 @@ file.*
 
 <!--- Badge images -->
 
-[coverage-badge]: https://img.shields.io/coverallsCoverage/github/ReflexCreations/Nexus
+[coverage-badge]: https://coveralls.io/repos/github/ReflexCreations/Nexus/badge.svg?branch=main
 [discord-badge]: https://img.shields.io/discord/738700768147669088?label=discord
 [docs-badge]: https://readthedocs.org/projects/reflex-nexus/badge/?version=latest
 [license-badge]: https://img.shields.io/github/license/ReflexCreations/Nexus

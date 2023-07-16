@@ -24,13 +24,13 @@ def docs() -> int:
 
 def lint() -> int:
     """Run linter on project."""
-    script = ["ruff", "check", "."]
+    script = ["ruff", "check", ".", "--output-file", "lint.txt"]
     return subprocess.run(script).returncode
 
 
 def test() -> int:
     """Run unit tests on project."""
-    script = ["pytest", "--cov=."]
+    script = ["pytest", "--cov=.", "--junitxml=test.xml"]
     return subprocess.run(script).returncode
 
 
