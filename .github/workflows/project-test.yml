@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Setup python
-      uses: actions/setup-python@v4
+    - uses: actions/setup-python@v4
       with:
         python-version: '3.10'
     - name: Run test suite
@@ -18,9 +17,6 @@ jobs:
         poetry run test
     - name: Upload to coveralls
       uses: coverallsapp/github-action@v2
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        coveralls-token: ${{ secrets.COVERALLS_TOKEN }}
     - name: Upload report
       uses: actions/upload-artifact@v3
       if: always()
