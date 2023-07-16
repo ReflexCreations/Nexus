@@ -8,11 +8,13 @@ jobs:
     with: 
       os: ubuntu-latest
   test:
+    needs: setup-deps
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: poetry run test
   lint:
+    needs: setup-deps
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
