@@ -18,7 +18,7 @@ metadata |= config.get("metadata", {})
 
 project = metadata["title"]
 author = metadata["authors"][0]
-release = version = metadata["version"]
+version = metadata["version"]
 copyright = metadata["copyright"]
 
 extensions = [

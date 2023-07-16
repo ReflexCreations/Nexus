@@ -126,11 +126,12 @@ file.*
 [Sphinx]: https://pypi.org/project/Sphinx/
 [Sphinx-Rtd-Theme]: https://pypi.org/project/sphinx-rtd-theme/
 
+
 <!--- Badge images -->
 
 [coverage-badge]: https://img.shields.io/coverallsCoverage/github/ReflexCreations/Nexus
 [discord-badge]: https://img.shields.io/discord/738700768147669088?label=discord
-[docs-badge]: https://img.shields.io/readthedocs/reflex-nexus
+[docs-badge]: https://readthedocs.org/projects/reflex-nexus/badge/?version=latest
 [license-badge]: https://img.shields.io/github/license/ReflexCreations/Nexus
 [lint-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/lint.yml?label=linting
 [linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-linux.yml?label=linux%20build
