@@ -42,4 +42,4 @@ jobs:
       - name: Create Release and Upload Artifacts
         uses: softprops/action-gh-release@v1
         with:
-          files: macos-release
+          files: macos-release/reflex-nexus.app
