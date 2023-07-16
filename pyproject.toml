@@ -9,7 +9,7 @@ logo = "assets/favicon.ico"
 
 [tool.poetry]
 name = "reflex-nexus"
-version = "0.0.12"
+version = "0.0.22"
 description = "RE:Flex Nexus - Universal Dance Pad Utilities"
 authors = ["Brittany Barrett <brittany.l.barrett@gmail.com>"]
 packages = [{include = "src"}]

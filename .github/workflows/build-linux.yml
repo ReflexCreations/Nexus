@@ -45,6 +45,7 @@ jobs:
         with:
           files: ./linux-release/reflex-nexus
   publish-package:
+    name: Publish package
     needs: publish-executable
     runs-on: ubuntu-latest
     environment:
