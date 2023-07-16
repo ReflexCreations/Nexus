@@ -23,7 +23,7 @@ jobs:
         elif [[ "${{ inputs.os }}" == "macos-latest" ]]; then
           echo "brew install mesa"
         fi
-    - run: ${{ steps.install-command.outputs.command }}}
+    - run: ${{ steps.install-command.outputs.command }}
     - id: cache
       uses: actions/cache@v2
       with:
