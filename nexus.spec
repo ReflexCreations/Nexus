@@ -58,7 +58,6 @@ elif sys.platform == "darwin":
     app = BUNDLE(
         exe,
         name='reflex-nexus.app',
-        icon='assets/favicon.icns',
         bundle_identifier=None)
 else:
     # Linux and other Unix-like systems settings
