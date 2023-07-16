@@ -41,4 +41,4 @@ jobs:
       - name: Create Release and Upload Artifacts
         uses: softprops/action-gh-release@v1
         with:
-          files: windows-release
+          files: windows-release/reflex-nexus.exe
