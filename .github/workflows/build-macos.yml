@@ -17,5 +17,5 @@ jobs:
     - name: Upload build
       uses: actions/upload-artifact@v3
       with:
-        name: macos-build
+        name: macos-release
         path: dist/reflex-nexus.app
