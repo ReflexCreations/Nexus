@@ -6,9 +6,6 @@ on:
       os:
         required: true
         type: string
-    secrets:
-      cache-token:
-        required: true
 
 jobs:
   setup:
