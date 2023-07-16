@@ -18,5 +18,5 @@ jobs:
     - name: Upload build
       uses: actions/upload-artifact@v3
       with:
-        name: linux-build
+        name: linux-release
         path: dist/reflex-nexus

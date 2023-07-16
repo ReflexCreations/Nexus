@@ -16,5 +16,5 @@ jobs:
     - name: Upload build
       uses: actions/upload-artifact@v3
       with:
-        name: windows-build
+        name: windows-release
         path: dist/reflex-nexus.exe

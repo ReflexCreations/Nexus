@@ -133,10 +133,10 @@ file.*
 [discord-badge]: https://img.shields.io/discord/738700768147669088?label=discord
 [docs-badge]: https://readthedocs.org/projects/reflex-nexus/badge/?version=latest
 [license-badge]: https://img.shields.io/github/license/ReflexCreations/Nexus
-[lint-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/lint.yml?label=linting
+[lint-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/project-lint.yml?label=linting
 [linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-linux.yml?label=linux%20build
 [macos-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-macos.yml?label=macos%20build
 [pypi-badge]: https://img.shields.io/pypi/v/reflex-nexus
 [tag-badge]: https://img.shields.io/github/v/tag/ReflexCreations/Nexus
-[test-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/test.yml?label=tests
+[test-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/project-test.yml?label=tests
 [windows-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-windows.yml?label=windows%20build
