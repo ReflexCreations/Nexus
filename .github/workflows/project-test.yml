@@ -1,4 +1,4 @@
-name: test
+name: project-lint
 on: pull_request
 jobs:
   test:
