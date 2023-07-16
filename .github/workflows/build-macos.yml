@@ -39,6 +39,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: macos-release
+          path: ./macos-release
       - name: Create Release and Upload Artifacts
         uses: softprops/action-gh-release@v1
         with:

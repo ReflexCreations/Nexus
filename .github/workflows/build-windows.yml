@@ -38,6 +38,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: windows-release
+          path: ./windows-release
       - name: Create Release and Upload Artifacts
         uses: softprops/action-gh-release@v1
         with:
