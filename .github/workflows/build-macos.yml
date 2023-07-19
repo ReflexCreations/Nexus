@@ -1,4 +1,4 @@
-name: build-macos
+name: MacOS build
 on: 
   pull_request:
   push:
@@ -21,11 +21,12 @@ jobs:
         pip install poetry
         poetry install
         poetry run build
+        tar -czvf reflex-nexus-app.tar.gz dist/reflex-nexus.app
     - name: Upload build
       uses: actions/upload-artifact@v3
       with:
         name: macos-release
-        path: dist/reflex-nexus.app
+        path: dist/reflex-nexus-app.tar.gz
   publish:
     name: Publish release
     needs: build
@@ -43,4 +44,4 @@ jobs:
       - name: Create Release and Upload Artifacts
         uses: softprops/action-gh-release@v1
         with:
-          files: ./macos-release/reflex-nexus.app
+          files: ./macos-release/reflex-nexus-app.tar.gz

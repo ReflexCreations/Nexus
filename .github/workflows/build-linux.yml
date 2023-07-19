@@ -1,4 +1,4 @@
-name: build-linux
+name: Linux build/package/release
 on: 
   pull_request:
   push:

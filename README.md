@@ -1,9 +1,7 @@
-[![][linux-badge]][Releases] [![][macos-badge]][Releases]
-[![][windows-badge]][Releases] [![][pypi-badge]][pypi]
 [![][docs-badge]][Documentation] [![][lint-badge]][lint]
-[![][test-badge]][test] [![][coverage-badge]][coverage]
-[![][license-badge]][LICENSE] [![][tag-badge]][tag]
-[![][discord-badge]][discord]
+[![][test-badge]][test] [![][coverage-badge]][coverage] 
+[![][license-badge]][LICENSE] [![][discord-badge]][discord]
+[![][tag-badge]][tag] [![][pypi-badge]][pypi] 
 
 __Note: This is a work in progress project. References made in the readme__
 __and documentation are currently unfulfilled.__
@@ -23,50 +21,16 @@ technology together.
 
 ## Installation
 
-- The latest executable can be found on the [Releases] page
-- Download the application for your respective operating system
-- Download the `nexus-resources.zip` package and extract to the location
-you would like to store program data
-- Open the `reflex-nexus` application
-- You will be prompted to set up your program data folder, enter the directory
-of the folder that you just extracted
+[![][linux-badge]][linux] [![][macos-badge]][macos]
+[![][windows-badge]][windows]
 
-## Usage
+The application is stand-alone and requires no installation, so place the
+executable wherever you wish to use it, and start it up.
 
-For details on usage, check out the [Documentation].
+## Documentation
 
-## Contributing
-
-Install the latest version of [Python] and [git], use your terminal/command
-prompt to navigate to the directory you would like to install this project to,
-then run the following commands:
-
-```bash
-# Clone and enter repository.
-git clone https://github.com/ReflexCreations/Nexus.git
-cd nexus
-# Get the build/environment manager.
-pip install poetry
-# Set up virtual environment and install reflex_nexus as package.
-poetry install
-```
-
-You're all set up! You can now use [Poetry] to run the application scripts.
-
-```bash
-# Build the executable.
-poetry run build
-# Build the documentation HTML.
-poetry run docs
-# Lint the project.
-poetry run lint
-# Test the project for your Python version and operating system.
-poetry run test
-```
-
-To synchronise your code editor with the virtual environment that Poetry
-creates, you can use `poetry env info -p`, copy the path, and supply that path
-to your code editor for the Python interpreter location.
+For details on usage, contribution, and guides on building your own dance pad,
+check out the [Documentation].
 
 ## Acknowledgements
 
@@ -99,14 +63,14 @@ file.*
 [coverage]: https://coveralls.io/github/ReflexCreations/Nexus?branch=main
 [discord]: https://discord.gg/TCn3emnwZU
 [Documentation]: https://reflex-nexus.readthedocs.io/
-[Git]: https://git-scm.com/downloads/
 [LICENSE]: https://github.com/ReflexCreations/Nexus/blob/master/LICENSE
 [lint]: https://github.com/ReflexCreations/Nexus/actions
-[Python]: https://python.org/downloads/
+[linux]: https://github.com/ReflexCreations/Nexus/releases/latest/download/reflex-nexus
+[macos]: https://github.com/ReflexCreations/Nexus/releases/latest/download/reflex-nexus.tar.gz
 [pypi]: https://pypi.org/project/reflex-nexus
-[Releases]: https://github.com/ReflexCreations/Nexus/releases/
 [tag]: https://github.com/ReflexCreations/Nexus/tags
 [test]: https://github.com/ReflexCreations/Nexus/actions
+[windows]: https://github.com/ReflexCreations/Nexus/releases/latest/download/reflex-nexus.exe
 
 <!--- Runtime dependency links -->
 
@@ -126,7 +90,6 @@ file.*
 [Sphinx]: https://pypi.org/project/Sphinx/
 [Sphinx-Rtd-Theme]: https://pypi.org/project/sphinx-rtd-theme/
 
-
 <!--- Badge images -->
 
 [coverage-badge]: https://coveralls.io/repos/github/ReflexCreations/Nexus/badge.svg?branch=main
@@ -134,9 +97,9 @@ file.*
 [docs-badge]: https://readthedocs.org/projects/reflex-nexus/badge/?version=latest
 [license-badge]: https://img.shields.io/github/license/ReflexCreations/Nexus
 [lint-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/project-lint.yml?label=linting
-[linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-linux.yml?label=linux%20build
-[macos-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-macos.yml?label=macos%20build
+[linux-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-linux.yml?label=Linux%20Download
+[macos-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-macos.yml?label=MacOS%20Download
 [pypi-badge]: https://img.shields.io/pypi/v/reflex-nexus
 [tag-badge]: https://img.shields.io/github/v/tag/ReflexCreations/Nexus
 [test-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/project-test.yml?label=tests
-[windows-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-windows.yml?label=windows%20build
+[windows-badge]: https://img.shields.io/github/actions/workflow/status/ReflexCreations/Nexus/build-windows.yml?label=Windows%20Download
