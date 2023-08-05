@@ -27,6 +27,9 @@ pyusb = "*"
 pyqtdarktheme = "*"
 QtAwesome = "*"
 
+[tool.poetry.group.cover.dependencies]
+pytest-cov = "*"
+
 [tool.poetry.group.docs.dependencies]
 sphinx = "*"
 sphinx_rtd_theme = "*"
@@ -45,6 +48,7 @@ pytest-cov = "*"
 [tool.poetry.scripts]
 app = "nexus:app"
 build = "nexus:build"
+cover = "nexus:cover"
 docs = "nexus:docs"
 lint = "nexus:lint"
 test = "nexus:test"

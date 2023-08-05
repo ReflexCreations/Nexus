@@ -1,4 +1,5 @@
 """Main entry scripts for RE:Flex Nexus project."""
+import pathlib
 import subprocess
 import sys
 
@@ -16,6 +17,12 @@ def build() -> int:
     return subprocess.run(script).returncode
 
 
+def cover() -> int:
+    """Create coverage report for coveralls."""
+    script = ["coverage", "xml"]
+    return subprocess.run(script).returncode
+
+
 def docs() -> int:
     """Build Sphinx documentation for project."""
     script = ["sphinx-build", "-E", "-a", "-b", "html", "docs/", "docs/build"]
@@ -29,8 +36,14 @@ def lint() -> int:
 
 
 def test() -> int:
-    """Run unit tests on project."""
-    script = ["pytest", "--cov=.", "--junitxml=test.xml"]
+    """Run unit tests on project, with context of source coverage."""
+    def is_valid_dir(p: pathlib.Path) -> bool:
+        if not p.is_dir() or p.name.startswith("_") or p.name.startswith("."):
+            return False
+        return True
+    source = pathlib.Path(__file__).parent / "src"
+    paths = [f"--cov={p}" for p in source.rglob('*') if is_valid_dir(p)]
+    script = ["pytest", "--junitxml=test.xml", *paths]
     return subprocess.run(script).returncode
 
 
