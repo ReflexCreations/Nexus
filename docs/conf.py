@@ -27,7 +27,7 @@ extensions = [
 
 templates_path = ["_templates"]
 
-language = "English"
+language = "en"
 
 html_logo = from_root(metadata["logo"])
 html_theme = "sphinx_rtd_theme"
